@@ -1,8 +1,8 @@
 package com.restaurantweb.utils;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
-import javax.servlet.annotation.WebListener;
+import jakarta.servlet.ServletContextListener;
+
+import jakarta.servlet.ServletContextEvent;
 import java.sql.Connection;
 import java.sql.SQLException;
 
