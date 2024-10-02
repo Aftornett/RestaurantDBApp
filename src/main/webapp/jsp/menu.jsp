@@ -41,17 +41,17 @@
 </table>
 
 <h2>Добавить новое блюдо</h2>
-<form action="menu" method="post">
+<form action="addDish" method="post">
     <label for="dishName">Название:</label>
     <input type="text" id="dishName" name="dishName" required>
     <br><br>
     <label for="cost">Цена:</label>
     <input type="number" step="0.01" id="cost" name="cost" required>
     <br><br>
-    <label for="preview">Превью (например, URL картинки):</label>
-    <textarea id="preview" name="preview" required></textarea>
+    <label for="preview">Описание блюда:</label>
+    <input id="preview" name="preview" required></input>
     <br><br>
-    <label for="dish_type">Название:</label>
+    <label for="dish_type">Тип блюда:</label>
     <input type="text" id="dish_type" name="dish_type" required>
     <br><br>
     <input type="submit" value="Добавить блюдо">

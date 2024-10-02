@@ -35,11 +35,11 @@ public class MenuDAO {
         return menuItems;
     }
 
-    public void addDish(String dishName, String cost, String preview, String dish_type) throws SQLException {
+    public void addDish(String dishName, float cost, String preview, String dish_type) throws SQLException {
         String query = "INSERT INTO menu (dish_name, cost, preview, dish_type) VALUES (?, ?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, dishName);
-            statement.setString(2, cost);
+            statement.setFloat(2, cost);
             statement.setString(3, preview);
             statement.setString(4, dish_type);
             statement.executeUpdate();

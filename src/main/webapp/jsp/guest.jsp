@@ -39,22 +39,22 @@
     </c:forEach>
 </table>
 
-<form action="addDish" method="post">
+<form action="addGuest" method="post">
     <table>
         <tr>
-            <td><label for="dishName">Название блюда:</label></td>
-            <td><input type="text" id="dishName" name="dishName" required></td>
+            <td><label for="guestName">Имя гостя:</label></td>
+            <td><input type="text" id="guestName" name="guestName" required></td>
         </tr>
         <tr>
-            <td><label for="cost">Цена:</label></td>
-            <td><input type="text" id="cost" name="cost" required></td>
+            <td><label for="guestPhone">Номер телефона:</label></td>
+            <td><input type="text" id="guestPhone" name="guestPhone" required></td>
         </tr>
         <tr>
-            <td><label for="preview">Описание/Фото:</label></td>
-            <td><input type="text" id="preview" name="preview"></td>
+            <td><label for="deliveryAdr">Адрес доставки:</label></td>
+            <td><input type="text" id="deliveryAdr" name="deliveryAdr"></td>
         </tr>
         <tr>
-            <td colspan="2"><input type="submit" value="Добавить блюдо"></td>
+            <td colspan="2"><input type="submit" value="Добавить гостя"></td>
         </tr>
     </table>
 </form>

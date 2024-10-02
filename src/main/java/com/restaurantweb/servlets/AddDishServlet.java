@@ -38,7 +38,7 @@ public class AddDishServlet extends HttpServlet {
 
         // Добавляем новое блюдо в базу данных
         try {
-            menuDAO.addDish(dishName, cost, preview, dish_type);
+            menuDAO.addDish(dishName, Float.parseFloat(cost), preview, dish_type);
             // Перенаправляем обратно на страницу меню
             response.sendRedirect("menu");
         } catch (SQLException e) {
