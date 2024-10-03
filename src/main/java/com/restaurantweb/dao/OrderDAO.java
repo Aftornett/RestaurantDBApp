@@ -4,6 +4,7 @@ import com.restaurantweb.models.Order;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.time.LocalDateTime;
 
 public class OrderDAO {
     private Connection connection;
@@ -33,6 +34,19 @@ public class OrderDAO {
         }
         return orders;
     }
+
+    // Метод для добавления нового заказа
+    public void addOrder(int guestId, Timestamp orderDatetime, String orderStatus) throws SQLException {
+        String query = "INSERT INTO orders (guest_id, order_datetime, order_status) VALUES (?, ?, ?)";
+        try (PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, guestId);
+            statement.setTimestamp(2, orderDatetime);
+            statement.setString(3, orderStatus);
+            statement.executeUpdate();
+        }
+    }
+
+
     // Закрытие подключения
     public void close() throws SQLException {
         if (connection != null && !connection.isClosed()) {

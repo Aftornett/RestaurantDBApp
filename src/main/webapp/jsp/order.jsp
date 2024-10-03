@@ -37,5 +37,18 @@
     </tr>
     <% } %>
 </table>
+
+<!-- Форма для добавления нового заказа -->
+<h2>Добавить новый заказ</h2>
+<form action="addOrder" method="post">
+    <label for="guestId">ID гостя:</label>
+    <input type="number" id="guestId" name="guestId" required><br><br>
+
+    <label for="orderStatus">Статус заказа:</label>
+    <input type="text" id="orderStatus" name="orderStatus" required><br><br>
+
+    <input type="submit" value="Добавить заказ">
+</form>
+
 </body>
 </html>

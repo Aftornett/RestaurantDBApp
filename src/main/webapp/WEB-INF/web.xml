@@ -64,6 +64,17 @@
         <url-pattern>/orders</url-pattern>
     </servlet-mapping>
 
+    <!-- Configuration for AddOrderServlet -->
+    <servlet>
+        <servlet-name>AddOrderServlet</servlet-name>
+        <servlet-class>com.restaurantweb.servlets.AddOrderServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddOrderServlet</servlet-name>
+        <url-pattern>/addOrder</url-pattern>
+    </servlet-mapping>
+
+
     <!-- Configuration for FeedbackServlet -->
     <servlet>
         <servlet-name>FeedbackServlet</servlet-name>
